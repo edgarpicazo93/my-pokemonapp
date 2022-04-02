@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let row of data">
+            <div class="card" style="width: 18rem;">
+                <img src="{{row.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ row.name | uppercase }}</h5>
+                  <p class="card-text" *ngFor="let abilities of row.abilities">
+                    <li>
+                        {{ abilities.ability.name }}
+                    </li>
+                  </p>
+                  <div class="row">
+                      <div class="stats col-lg-6" *ngFor="let stats of row.stats">
+                          <label class="col-lg-6 stats-label" for="{{stats.stat.name}}">{{trimName(stats.stat.name)}}</label>
+                          <input class="col-lg-6 stats-input" type="text" name="{{stats.stat.name}}" value="{{stats.base_stat}}">
+                      </div>
+                  </div>
+                  <div class="row" style="margin-top: 1rem">
+                    <a href="#" class="btn btn-primary">Counters</a>
+                  </div>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.card{
+    width: 22rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.stats {
+    display: grid;
+}
